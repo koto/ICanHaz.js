@@ -11,6 +11,7 @@
                 <p>I work for {{ employer }} as a {{ job_title }}.</p>
             </li>
         </script>
+        <input id=tw value='xss" onclick="alert(1);return false" any="'/>
         
         <script type="text/javascript">
             // when the dom's ready
@@ -23,7 +24,7 @@
                     // somewhere. Otherwise hardcoding here is just silly.
                     user_data = {
                         name: "Henrik Joreteg",
-                        twitter: "HenrikJoreteg",
+                        twitter: $('#tw').val(),
                         employer: "&yet",
                         job_title: "JS nerd"
                     };
